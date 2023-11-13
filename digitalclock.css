@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Croissant+One&family=Mooli&family=Pacifico&family=Poppins:ital@0;1&family=Roboto&display=swap');
+
+
+:root{
+    --light-color:rgb(red);
+}
+@font-face {
+    font-family:digital-7;
+    src: url('digital-7.regular.ttf');
+}
+
+body{
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:#1e272e;
+    color: white;
+}
+
+h2{
+    font-size: 38px;
+    font-weight: 300px;
+}
+
+.frame{
+    background-color:#2f3640;
+    color: #f5f6fa;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    border: 50px solid #fbc531;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    user-select: none;
+}
+
+.clock{
+    font-size: 60px;
+    text-align: center;
+    font-family: digital-7;
+    line-height: 180px;
+    text-shadow: 0 0 20px var(--light-color);
+    position: relative;
+}
+
+.clock::after{
+    position: absolute;
+    content: attr(data-text);
+    left:48px;
+    top:0;
+    filter:blur(55px);
+}
+
+@media screen and (max-width:400px){
+    h2{
+        font-size: 60px;
+    }
+   
+}
